@@ -1,0 +1,147 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue-color: #167CE9;
+    --hover-trans: 0.9s;
+}
+
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar {
+    background: #6ed9b5;
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: cornflowerblue;
+    transition: 1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(50, 102, 198);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+input {
+    border: none;
+
+    outline: none !important;
+
+    & :focus {
+        border: none;
+        outline: none !important;
+    }
+}
+
+/* Thing Builded */
+.button {
+    --pad-size: 10px;
+    background-color: var(--blue-color, blue);
+    color: white;
+    padding: var(--pad-size, 10px) var(--pad-size, 10px);
+    border-radius: calc(2*var(--pad-size, 10px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--hover-trans, 1s);
+    font-size: 1rem;
+
+    &:hover {
+        background-color: rgb(65, 65, 208);
+    }
+}
+
+/* Main  Nedded */
+.f-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+& .logo-box {
+    & span:first-of-type {
+        position: relative;
+        transition: var(--hover-trans, 1s);
+
+        &::before {
+            content: '\f549';
+            font-family: 'font Awesome 6 Free';
+            font-weight: 900;
+            margin-right: 5px;
+            color: var(--blue-color, blue);
+            font-size: max(14px, 0.5vw);
+        }
+
+    }
+
+    &:hover span:first-of-type {
+        color: white;
+    }
+
+    & span:last-of-type {
+        letter-spacing: 2px;
+    }
+}
+
+@media(max-width:767px) {
+    .f-col-mobile {
+        flex-direction: column;
+    }
+}
+
+/* Start Container Rules */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Container Rules */

@@ -1,0 +1,23 @@
+.about-landing {
+    height: 80vh;
+
+    &::before {
+        background-image: linear-gradient(to right, rgb(2 2 3 / 60%), rgb(0 0 0 / 60%), rgb(98 81 51 / 60%));
+    }
+
+    & .content {
+        top: 50%;
+
+        &>div .home {
+            opacity: 0.7;
+        }
+
+        &>div .about {
+            opacity: 0.6;
+        }
+
+        & h2 {
+            font-size: 22px;
+        }
+    }
+}
